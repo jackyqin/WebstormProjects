@@ -1,0 +1,7 @@
+.address-top-head{
+    width:30px;
+    height: 30px;
+    background-position: center;
+    background-size: cover;
+    background-image: url("../../../img/index/namebook-icon-press.svg");
+}

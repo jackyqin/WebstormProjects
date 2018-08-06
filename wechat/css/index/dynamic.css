@@ -1,0 +1,93 @@
+#dynamic{
+
+    width: 100%;
+    background-color: whitesmoke;
+    flex:1;
+    overflow: scroll;
+
+}
+.chat-item{
+    height: 62px;
+    width: 96%;
+    /*background: yellow;*/
+    display: flex;
+    margin: 0 auto;
+    align-items: center;
+    border-bottom: 1px solid darkgray;
+}
+.unread{
+    width: 10px;
+    height: 10px;
+    background: red;
+    border-radius: 50%;
+    position: absolute;
+    right:-4px;
+    top: -4px;
+
+}
+.item-left{
+    height: 50px;
+    width: 50px;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+}
+.item-right{
+    flex: 1;
+    margin-left: 10px;
+    height: 50px;
+}
+.content-top{
+    height: 30px;
+    display: flex;
+    justify-content: flex-end;
+}
+.nikename{
+    height: 30px;
+    flex: 1;
+    font-size: 18px;
+    color: #313131;
+}
+.time{
+    height: 30px;
+    width: 80px;
+    font-size: 12px;
+    color: gray;
+    text-align: right;
+}
+.content-bottom{
+    display: flex;
+    justify-content: flex-end;
+}
+.content-text{
+    white-space: nowrap;
+    font-size: 14px;
+    color: #8a8a8a;
+    height: 20px;
+    flex: 1;
+}
+.content-audio{
+    font-size: 14px;
+    color:crimson;
+    height: 20px;
+    flex: 1;
+}
+.silence{
+    width: 20px;
+    height: 20px;
+
+    display: flex;
+    justify-content:flex-start;
+    align-items: flex-start;
+}
+.quiet{
+    width: 16px;
+    height: 16px;
+    background-size: contain;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    background-image: url("../../../img/index/selience.svg");
+}

@@ -1,0 +1,15 @@
+
+#container{
+    position: fixed;
+
+    height: 100%;
+
+    width: 100%;
+
+    /*background: gray;*/
+
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+
+}

@@ -1,0 +1,122 @@
+
+#title{
+
+    width: 100%;
+    height: 60px;
+    background: #3C3F41;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    color: white;
+    font-size: 17px;
+}
+
+#title-left{
+    height: 60px;
+    width: 40px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-flow: row nowrap;
+    margin-left: 10px;
+}
+#title-center{
+
+    height: 60px;
+    display: flex;
+    width: 100%;
+    flex: 1;
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 10px;
+
+}
+.mirr{
+    height: 30px;
+    width: 25px;
+    background-image: url("../../../img/index/mirr.svg");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+
+}
+
+#title-right{
+    width: 50px;
+    height: 60px;
+    display: flex;
+    flex-flow: nowrap;
+    align-items: center;
+    justify-content:flex-end;
+    margin-right: 10px;
+    position: relative;
+}
+#title-add{
+    width: 25px;
+    height: 30px;
+    background: url("../../../img/index/add.svg");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-right: 10px;
+
+}
+#title-menu{
+    display: none;
+    width: 180px;
+    height: 250px;
+    background: #3C3F41;
+    position: absolute;
+    top: 59px;
+    right: 6px;
+    /*box-shadow: 0px -10px 10px #313131;*/
+}
+#title-menu>div{
+    height: 49px;
+    border-bottom: 1px solid gray;
+}
+#title-chat{
+    display: flex;
+    justify-content: space-between;
+}
+.title-icon{
+    display: flex;
+    align-items: center;
+    width: 50px;
+    height: 49px;
+    justify-content: center;
+
+}
+.icon{
+    width: 30px;
+    height: 30px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    margin-left: 10px;
+}
+.title-content{
+    margin-left: 10px;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    /*font-weight: 600;*/
+}
+#title-friend{
+    display: flex;
+    justify-content: space-between;
+}
+#title-scan{
+    display: flex;
+    justify-content: space-between;
+}
+#title-pay{
+     display: flex;
+     justify-content: space-between;
+ }
+#title-help{
+    display: flex;
+    justify-content: space-between;
+}

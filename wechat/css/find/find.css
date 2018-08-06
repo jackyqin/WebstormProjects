@@ -1,0 +1,53 @@
+#find{
+    width: 100%;
+    height: 100%;
+    background-color: gainsboro;
+    flex:1;
+    overflow: scroll;
+    /*border: 1px solid red;*/
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+
+
+}
+.find-area>div{
+    background: whitesmoke;
+}
+.find-list{
+    display: flex;
+    justify-content: flex-start;
+}
+.find-img{
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+}
+.find-main{
+    width: 92%;
+    margin: 0 auto;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content:flex-start;
+    border-bottom: 1px solid gainsboro;
+}
+.find-head{
+    width: 25px;
+    height: 25px;
+    display: flex;
+}
+.find-right{
+    flex: 1;
+    white-space: nowrap;
+    margin-left: 14px;
+    font-family: "黑体";
+    font-size: 13px;
+    letter-spacing: 0.5px;
+}
+.find-gray .find-main {
+    height: 20px;
+    font-size: 13px;
+}
+

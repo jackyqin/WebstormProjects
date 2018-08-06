@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Title</title>
+    <meta charset="UTF-8">
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+
+    <link rel="stylesheet" href="../css/index/common.css">
+
+    <link rel="stylesheet" href="../css/index/container.css">
+
+
+    <link rel="stylesheet" href="../css/index/dynamic.css">
+
+    <link rel="stylesheet" href="../css/index/menu.css">
+
+    <link rel="stylesheet" href="../css/index/signal.css">
+
+    <link rel="stylesheet" href="../css/contact/contact.css">
+
+    <link rel="stylesheet" href="../css/find/find.css">
+
+    <link rel="stylesheet" href="../css/myself/myself.css">
+    <!--<link rel="stylesheet" href="../css/index/title.css">-->
+    <link rel="stylesheet" href="../css/index/chat-message.css">
+
+
+
+</head>
+<body>
+<div id="container">
+    <!--signal start-->
+    <div id="signal">
+        <div id="signal-left" >中国移动</div>
+        <div id="signal-right" >
+            <div class="xg">4G</div>
+            <div class="signal-area">
+
+                <div class="signal-ok"></div>
+                <div class="signal-ok"></div>
+                <div class="signal-ok"></div>
+                <div class="signal-lose"></div>
+
+            </div>
+            <div class="electric">84%</div>
+            <div id="battery">
+                <div id="battery-body">
+                    <div id="battery-core" class="charging"></div>
+                </div>
+                <div id="battery-header"></div>
+            </div>
+            <div id="time"></div>
+        </div>
+    </div>
+
+    <!--signal end-->
+    <!--title start-->
+    <div id="title">
+        <div id="title-left" > &lt;</div>
+
+        <div id="title-center">
+            图灵机器人
+        </div>
+
+        <div id="title-right" >
+
+            <div class="more">
+
+            </div>
+
+        </div>
+    </div>
+
+    <!--title end-->
+    <!--dynamic start--><div class="null"></div>
+    <div id="chat-content">
+
+    </div>
+
+
+
+
+
+
+    <!--dynamic end-->
+    <!--menu start-->
+    <div id="chat-menu">
+        <div class="yuyin">
+            <div class="yuyin-image "></div>
+        </div>
+        <div class="input ">
+
+            <input type="text" id="content" />
+        </div>
+        <div class="submit">
+            <input type="button" id="btn" value="发送" />
+
+        </div>
+    </div>
+    <!--menu end-->
+</div>
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/index/index.js"></script>
+<script>
+    $(function() {
+
+        var key = "b7f3afeea99c40c7a9df742f64551105";
+        var url = "http://www.tuling123.com/openapi/api";   //openAPI
+
+        $('#btn').click(function() {  //当点击时
+
+            var info = {
+                "key": key,
+                "info": $("#content").val()
+            }   //向图灵 发送 聊天数据     .val  =  value
+
+            //生成自己的聊天内容
+            var self = $("<div class='space'></div><div class='head1 right'></div><div class='right size text'>"+$("#content").val()+"</div><br clear='both'><div class='space'></div>")
+            $("#chat-content").append(self)
+
+
+            $.ajax({
+                type: "POST",
+                url: url,
+                data: info,
+                dataType: "json",
+                success: function(result) {
+                    var robot = $("<div class='space'></div><div class='head2 left'></div><div class='left size text'>"+result.text +"</div><br clear='both'><div class='space'></div>")
+
+                    $("#chat-content").append(robot)
+
+                }
+            });
+
+
+        });
+
+        $("#title-left").click(function () {
+            window.location.href="index.html";
+        });
+
+    })
+</script>
+
+</body>
+</html>
+
